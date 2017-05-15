@@ -102,7 +102,7 @@ module.exports = {
 
 ---
 
-# nightwtch.json
+# nightwatch.json
 
 ``` json
 {
@@ -135,13 +135,13 @@ module.exports = {
 "scripts": {
   "start": "webpack-dev-server --open",
   "build": "webpack",
-  "nightwtch": "nightwtch"
+  "nightwatch": "nightwatch"
 }
 ```
 
 ---
 
-# src/index.html
+# index.html
 
 ``` html
 <!doctype html>
@@ -167,12 +167,12 @@ module.exports = {
     <div>
       <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
         <div class="checkbox">
           <label>
@@ -234,6 +234,8 @@ class LoginController {
     }
   }
 }
+
+export default LoginController;
 ```
 
 ---
@@ -258,6 +260,10 @@ this.loginTest = function(browser) {
 ---
 
 # run nightwatch
+
+``` bash
+$ npm start
+```
 
 ``` bash
 $ npm run nightwatch
